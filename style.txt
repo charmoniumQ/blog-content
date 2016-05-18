@@ -1,0 +1,8 @@
+Icon: Confused
+Background color: e6e6e6
+Color: 6699ff
+
+https://milligram.github.io/
+http://purecss.io/
+https://imperavi.com/kube/css/
+http://mincss.com/docs.html

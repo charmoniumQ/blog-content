@@ -15,6 +15,12 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://samgrayson.me" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  charmoniumQ
+language: en_US
+favicon_img: true
+favicon_img_path: /favicon.ico
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-archives

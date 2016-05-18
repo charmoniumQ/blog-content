@@ -1,0 +1,29 @@
+https://desiredpersona.com/disqus-comments-jekyll/
+http://programmers.stackexchange.com/questions/46716/what-technical-details-should-a-programmer-of-a-web-application-consider-before
+http://schema.org/docs/gs.html
+Creative commons
+404 page
+Sitemap page
+https://github.com/penibelst/jekyll-noita
+http://vinitkumar.me/white-paper/
+https://github.com/camporez/Thinny
+https://desiredpersona.com/disqus-comments-jekyll/
+http://fontawesome.io/
+https://github.com/aFarkas/html5shiv
+
+Topics:
+Python + Numpy vs R or Matlab
+
+Typography:
+https://vimeo.com/17079380
+http://nicewebtype.com/notes/getting-started/
+http://www.w3schools.com/html/html5_syntax.asp
+view-source:http://www.initializr.com/front/try/css/main.css
+http://www.basehold.it/
+http://alistapart.com/article/more-meaningful-typography
+http://blog.typekit.com/2014/02/26/deriving-layout-from-your-typeface/
+http://blog.8thlight.com/billy-whited/2011/10/17/expressive-html.html
+http://webtypography.net/toc/
+http://blog.8thlight.com/billy-whited/2011/10/28/r-a-ela-tional-design.html#tips
+http://typecast.com/#sign-in
+http://adactio.com/journal/4999/

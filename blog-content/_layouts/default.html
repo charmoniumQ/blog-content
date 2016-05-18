@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
+<html {% if site.language %}lang="{{ site.language }}"{% endif %}>
+  <head>
+	{% include head.html %}
+  </head>
   <body>
+     <!-- Piwik -->
+    <noscript><img src="//piwik.samgrayson.me/piwik.php?idsite=1&rec=1" style="border:0;display:none;" alt="" /></noscript>
 
-    {% include header.html %}
+	<div class="below-nav pure-g">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
+		  <header class="pure-u-1-1">
+			{% include header.html %}
+		  </header>
+	  <div class="content pure-u-3-4">
+		<div class="sub">
+		  <main>
+			{{ content }}
+		  </main>
+		  <footer>
+			{% include footer.html %}
+		  </footer>
+		</div>
+	  </div>
+	  <aside class="about pure-u-1-4">
+		{% include aside.html %}
+	  </aside>
+	</div>
   </body>
-
 </html>
