@@ -11,8 +11,9 @@ excerpt: >
 ---
 
 You could do everything that is done with a configuration management tool like
-ansible through standard shell scripts. Configuration managers just gives you a
-higher level of abstraction, which gives two advantages: ease of use and more
+ansible through standard shell scripts. Configuration managers (like
+[ansible](https://angularclass.com/how-to-use-ansible/)) just gives you a higher
+level of abstraction, which gives two advantages: ease of use and more
 generalization at the cost of speed and granularity.
 
 Configuration management is so good
