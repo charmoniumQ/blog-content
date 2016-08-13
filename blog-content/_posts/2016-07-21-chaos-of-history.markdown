@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "The Chaos of History"
-date:   2016-05-16 12:53:38 -0500
-tags: linux
+tags: history
 excerpt: >
   We like to think that systems like human society have some predictable order,
   when in reality, history is driven by completely unpredictable random events.
@@ -74,8 +73,14 @@ like to think that this order is affected by world leaders and important
 people. We like to think that things happen for compelling reasons. But when a
 world war breaks out on account of the chauffeurs wrong turn, I realize that
 human society is so vastly complex and intricate that some events are just so
-'out there' to be foreseen. And even in a system with so many people, sometimes
-one seemingly unimportant person can have a huge effect.
+'out there' to be foreseen.
+
+Forget Great Man History or Trends and Forces History, I propose Random
+History. Most events follow trends and forces or are influenced by great men;
+these may be somewhat predictable. But the events that really make a change,
+like 9/11, are completely random and unforeseen, even by scholars. That course
+of history wasn't determined by simple rules ore logical reasons. It's just Lady
+Fortuna spinning her wheel.
 
 I think I'm going the way of Sartre.
 

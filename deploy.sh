@@ -1,7 +1,6 @@
 #!/bin/sh
 
-cd `dirname $0`
-cd blog-content
+cd `dirname $0`/blog-content
 
 jekyll build
 
@@ -10,6 +9,8 @@ rsync --checksum \
 	  --verbose \
 	  --compress \
 	  --delete \
+	  --progress \
+	  --info=progress2 \
 	  _site \
 	  admin@samgrayson.me:jekyll/
 

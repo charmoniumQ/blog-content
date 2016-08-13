@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Hobbyist server admin"
-date:   2016-05-16 12:53:38 -0500
 tags: linux
 excerpt: >
   Cheap hosting is making server hardware accessible to hobbyists. That ability

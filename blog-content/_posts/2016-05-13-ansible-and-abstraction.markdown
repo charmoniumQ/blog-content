@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Ansible and abstraction?"
-date:   2016-05-13 12:53:38 -0500
 categories: linux
 excerpt: >
   This has been the direction of computer systems since they first began: As the
