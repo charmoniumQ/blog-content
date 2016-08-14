@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ansible and abstraction?"
-categories: linux
+tags: linux
 excerpt: >
   This has been the direction of computer systems since they first began: As the
   raw parts of a computer become cheaper and smaller, the systems built out of

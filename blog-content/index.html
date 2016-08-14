@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Interesting Thoughts
-subtitle: Blog about computers, mathematics, and philosophy
+subtitle: Blog about computers, mathematics, and philosophy. Occasionally other people find my thoughs on these things interesting.
 ---
 
 <div class="posts-list">
@@ -18,11 +18,11 @@ subtitle: Blog about computers, mathematics, and philosophy
     </a>
 
     <p class="post-meta">
-      Posted on {{ post.date | date: "%B %-d, %Y" }}
+      Occured to me on {{ post.date | date: "%B %-d, %Y" }}
     </p>
 
     <div class="post-entry">
-      {{ post.content | strip_html | xml_escape | truncatewords: 50 }}
+      {{ post.excerpt }}
 	  <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
     </div>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fundamentalist technology"
-categories: programming
+tags: programming
 excerpt: >
 
   There are few techniques that are globally applicable in software development,
@@ -10,9 +10,6 @@ excerpt: >
   the right tool for the job</i>.
 
 ---
-
-Fundamentalist technology
-=========================
 
 > Let's make a JSON RESTful microservice with big data on the EC2 cloud using
 > MongoDB and internet-of-things integration... -- Pretty much everyone at a

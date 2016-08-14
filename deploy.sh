@@ -2,7 +2,7 @@
 
 cd `dirname $0`/blog-content
 
-jekyll build
+bundle exec jekyll build
 
 rsync --checksum \
 	  --recursive \

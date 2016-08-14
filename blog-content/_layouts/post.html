@@ -8,16 +8,21 @@ layout: base
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-      <article role="main" class="blog-post">
+      <article role="main" class="blog-post" itemprop="articleBody">
         {{ content }}
       </article>
 
+	  <div class="post-footer">
+		  <div itemprop="author" class="post-meta by-line" itemscope itemtype="http://schema.org/Person">
+			  By <span itemprop="name"><span itemprop="givenName">{{ site.author.firstname }}</span> <span itemprop="familyName">{{ site.author.lastname }}</span></span>
+          </div>
+
       {% if page.tags.size > 0 %}
-        <div class="blog-tags">
+        <div class="blog-tags" itemprop="keywords">
           Tags:
           {% if site.link-tags %}
           {% for tag in page.tags %}
-            <a href="/tag/{{ tag }}">{{ tag }}</a>
+            <a href="/tag/{{ tag }}" itemprop="articleSection">{{ tag }}</a>
           {% endfor %}
           {% else %}
             {{ page.tags | join: ", " }}
@@ -28,6 +33,7 @@ layout: base
       {% if page.social-share %}
         {% include social-share.html %}
       {% endif %}
+      </div>
 
       <ul class="pager blog-pager">
         {% if page.previous.url %}
@@ -50,3 +56,5 @@ layout: base
     </div>
   </div>
 </div>
+
+</div> <!-- itemscope -->

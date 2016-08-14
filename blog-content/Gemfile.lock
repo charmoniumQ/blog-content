@@ -130,6 +130,7 @@ DEPENDENCIES
   execjs
   github-pages
   jekyll-paginate
+  jekyll-sitemap
   therubyracer
 
 BUNDLED WITH
