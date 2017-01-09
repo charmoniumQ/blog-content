@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Chaos of History"
+title: The Chaos of History (part 1)
 tags: history
 excerpt: >
   We like to think that systems like human society have some predictable order,
@@ -86,5 +86,6 @@ I think I'm going the way of Sartre.
 
 ### Further reading
 
+- [Part 2]({{ site.baseurl }}{% post_url 2017-01-09-chaos-of-history-2 %})
 - Scientific American: [Gavrilo Princip, conspiracy theories and the fragility of cause and effect](http://blogs.scientificamerican.com/the-curious-wavefunction/gavrilo-princip-conspiracy-theories-and-the-fragility-of-cause-and-effect/)
 - [Chapter 1](http://www.nytimes.com/2007/04/22/books/chapters/0422-1st-tale.html?_r=0) of 'The Black Swan' by Nassim Taleb
