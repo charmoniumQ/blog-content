@@ -1,5 +1,9 @@
 #!/bin/sh
 
+host=samgrayson.me
+droppath=/home/sam/tmp/
+serverpath=/srv/samgrayson.me
+
 cd `dirname $0`/blog-content
 
 bundle exec jekyll build
@@ -12,8 +16,8 @@ rsync --checksum \
 	  --progress \
 	  --info=progress2 \
 	  _site \
-	  admin@samgrayson.me:jekyll/
+	  $host:$droppath
 
-ssh admin@samgrayson.me "sudo cp -R /home/admin/jekyll/_site/* /var/www/html"
+ssh $host "sudo cp -R $droppath/_site/* $serverpath ; rm -rf $droppath"
 
 rm -rf _site

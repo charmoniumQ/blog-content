@@ -26,12 +26,12 @@ author:
   firstname: Sam
   lastname: Grayson
   #email: "youremail@domain.com"
-  facebook: sam.grayson.ubuntu
+  facebook: charmoniumQ
   github: charmoniumQ
-  #twitter: yourname
-  linkedin: samgrayson  # eg. daattali
+  twitter: charmoniumQ
+  linkedin: samgrayson
   #xing: yourname
-  stackoverflow: 1078199/sam-grayson
+  stackoverflow: 1078199/charmoniumQ
   #instagram: yourname
   #youtube: yourlink
 
@@ -40,7 +40,7 @@ footer-links-active:
   rss: true
   facebook: true
   email: false
-  twitter: false
+  twitter: true
   github: true
   linkedin: true
   xing: false
