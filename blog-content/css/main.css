@@ -633,3 +633,7 @@ td.gutter {
 #social-share-section {
   margin-bottom: 30px;
 }
+
+.proof-table td {
+  text-align: center;
+}
