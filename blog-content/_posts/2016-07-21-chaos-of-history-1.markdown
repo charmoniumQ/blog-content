@@ -23,7 +23,7 @@ car! But the bomb bounced off his car and the assassination failed. The
 Archduke's motorcade sped away to protect him from any other assassination
 attempts.
 
-> "The Ides of March have come and I am still alive!" -- Julius Ceasar by
+> "The Ides of March have come and I am still alive!" -- Julius Caesar by
 > William Shakespeare
 
 Princip's realized he lost his chance, so he gave up and went to a nearby food
