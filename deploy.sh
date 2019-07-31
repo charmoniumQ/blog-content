@@ -18,6 +18,6 @@ rsync --checksum \
 	  _site \
 	  $host:$droppath
 
-ssh $host "sudo cp -R $droppath/_site/* $serverpath ; rm -rf $droppath"
+ssh $host "sudo cp -R $droppath/_site/* $serverpath"
 
-rm -rf _site
+#rm -rf _site
