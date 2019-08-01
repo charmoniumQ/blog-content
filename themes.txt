@@ -1,6 +1,0 @@
-http://jekyll.gtat.me/
-https://demo.ghost.io/
-http://lanyon.getpoole.com/
-http://pixyll.com/
-http://deanattali.com/beautiful-jekyll/
-https://mmistakes.github.io/so-simple-theme/

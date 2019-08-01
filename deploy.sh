@@ -1,23 +1,25 @@
 #!/bin/sh
 
-host=samgrayson.me
-droppath=/home/sam/tmp/
-serverpath=/srv/samgrayson.me
+bundle exec jekyll serve --watch --drafts --future --livereload --incremental
 
-cd `dirname $0`/blog-content
+# host=samgrayson.me
+# droppath=/home/sam/tmp/
+# serverpath=/srv/samgrayson.me
 
-bundle exec jekyll build
+# cd `dirname $0`/blog-content
 
-rsync --checksum \
-	  --recursive \
-	  --verbose \
-	  --compress \
-	  --delete \
-	  --progress \
-	  --info=progress2 \
-	  _site \
-	  $host:$droppath
+# bundle exec jekyll build
 
-ssh $host "sudo cp -R $droppath/_site/* $serverpath"
+# rsync --checksum \
+# 	  --recursive \
+# 	  --verbose \
+# 	  --compress \
+# 	  --delete \
+# 	  --progress \
+# 	  --info=progress2 \
+# 	  _site \
+# 	  $host:$droppath
 
-#rm -rf _site
+# ssh $host "sudo cp -R $droppath/_site/* $serverpath"
+
+# #rm -rf _site

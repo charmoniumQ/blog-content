@@ -1,1 +1,1 @@
-# blog-content
+# [Blog](https://samgrayson.me)

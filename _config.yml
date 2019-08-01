@@ -1,0 +1,202 @@
+###################
+# General options #
+###################
+
+# General options or used by more than one jekyll plugin
+
+baseurl: "" # the subpath of your site, e.g. /blog
+email: sam@samgrayson.me
+title: Interesting thoughts
+description: >- # this means to ignore newlines
+  Blog about computers, mathematics, and philosophy. Occasionally,
+  other people find my thoughts on these topics interesting.
+url: https://samgrayson.me # the base hostname & protocol for your site, e.g. http://example.com
+author:
+  name: Samuel Grayson
+  twitter: charmoniumQ
+  # email: sam@samgrayson.me
+  facebook: charmoniumQ
+  github: charmoniumQ
+  twitter: charmoniumQ
+  reddit: charmoniumQ
+  linkedin: SamGrayson
+  # TODO: make these work
+  stackoverflow: 1078199/charmoniumq
+  keybase: charmonium
+
+encoding: utf-8 # Make sure the encoding is right
+
+##########################
+# beautiful-jekyll-theme #
+##########################
+
+# see
+# - https://github.com/daattali/beautiful-jekyll/blob/master/_config.yml
+# - https://github.com/daattali/beautiful-jekyll
+
+navbar-links:
+  About Me: about_me/
+
+# Fill in your Disqus shortname (NOT the userid)
+disqus: interesting-thoughts
+
+avatar: /assets/img/logo/drawinghands.jpg
+
+# Select your active Social Network Links.
+# Uncomment the links you want to show in the footer and add your information to each link.
+# You can reorder the items to define the link order.
+# If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
+social-network-links:
+  rss: true
+  email: sam@samgrayson.me
+  facebook: charmoniumQ
+  github: charmoniumQ
+  twitter: charmoniumQ
+  reddit: charmoniumQ
+  linkedin: SamGrayson
+  stackoverflow: 1078199/charmoniumq
+  keybase: charmonium
+
+share-links-active:
+  rss: true
+  email: true
+  facebook: true
+  github: true
+  twitter: true
+  reddit: true
+  linkedin: true
+  stackoverflow: true
+
+# Use tags index page and make tags on each post clickable
+link-tags: true
+
+# for footer
+url-pretty: "SamGrayson.me"
+
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
+#gtag: ""
+
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+##################
+# Build settings #
+##################
+
+timezone: "America/Chicago"
+# markdown: kramdown
+# highlighter: rouge
+theme: beautiful-jekyll-theme
+permalink: /:year-:month-:day-:title/
+# plugins:
+# Plugins in the jekyll_plugins group in Gemfile need not be added here
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - .git/
+  - .gitignore
+  - .bundle/
+  - planning/
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - blog-content/
+  - deploy.sh
+
+##################
+# jekyll-seo-tag #
+##################
+
+twitter:
+  username: charmoniumQ
+  card: summary
+logo: assets/img/logo/drawinghands.jpg
+social:
+  name: Samuel Grayson
+  links:
+    - https://twitter.com/charmoniumQ
+    - https://www.facebook.com/charmoniumQ
+    - https://www.linkedin.com/in/SamGrayson
+    - https://github.com/charmoniumQ
+    - https://keybase.io/charmonium
+    - https://www.reddit.com/user/charmoniumQ
+    - https://stackoverflow.com/users/1078199/charmoniumq
+    - https://keybase.io/charmonium
+#google_site_verification:
+lang: en_US
+
+##############
+# Pagination #
+##############
+
+paginate: 5
+
+#####################
+# Post front matter #
+#####################
+
+# Post front matter:
+# https://github.com/jekyll/jekyll-feed#optional-front-matter
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# date
+# title
+# excerpt
+# category
+# tags
+# image - URL of an image that is representative of the post (can also be passed as image.path)
+
+# https://github.com/daviddarnes/alembic#page-and-post-options
+# comments: false: Turns off comments for that post
+# feature_image: "/uploads/feature-image.jpg": Adds a full width feature image at the top of the page
+# feature_text: "Example text": Adds text to the top of the page as a full width feature with solid colour; supports markdown. This can be used in conjunction with the feature_image option to create a feature image with text over it
+# indexing: false: Adds a noindex meta element to the <head> to stop crawler bots from indexing the page, used on the 404 page
+
+
+##########
+# minima #
+##########
+
+# minima:
+#   social_links:
+#     twitter: charmoniumQ
+#     github: charmoniumQ
+#     facebook: charmoniumQ
+#     linkedin: samgrayson
+
+# header_pages:
+#   - about.md
+
+# show_excerpts: true
+
+# disqus:
+#   # Disqus shortname (NOT the userid)
+#   shortname: "interesting-thoughts"
+
+###################
+# alembic (theme) #
+###################
+
+# navigation_header:
+# - title: Home
+#   url: /
+# - title: About
+#   url: /about_me/
+
+# social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+#   Twitter: https://twitter.com/charmoniumQ
+#   LinkedIn: https://www.linkedin.com/in/SamGrayson
+#   GitHub: https://github.com/charmoniumQ
+#   link: https://samgrayson.me
+#   RSS: /feed.xml
+
+# sharing_links: # Appear at the bottom of single blog posts, add as desired. The value can be 'true' or the desired button colour
+#   Twitter: true
+#   facebook: true
+#   Email: true
