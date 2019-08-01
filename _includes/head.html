@@ -3,6 +3,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+  {% include favicon.html %}
+
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <meta name="author" content="{{ site.author.name }}" />
@@ -107,5 +109,20 @@
   {% elsif site.avatar %}
   <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}
+
+  {% comment %} https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md {% endcomment %}
+  {%- seo title=false -%}
+
+  {% comment %} https://github.com/jekyll/jekyll-feed#meta-tags {% endcomment %}
+  {%- feed_meta -%}
+
+
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{{ site.url }}{{ site.baseurl}}/assets/css/main2.css" />
 
 </head>

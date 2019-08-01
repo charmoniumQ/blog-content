@@ -1,17 +1,18 @@
-404.html
-Theme options
-	"Ocurred to me on..."
-	Navbar shows "About Me"
-Favicon https://realfavicongenerator.net/
-Feed config
+x 404.html
+x Theme options
+x 	"Ocurred to me on..."
+x 	Navbar shows "About Me"
+x Favicon https://realfavicongenerator.net/
+x Feed config
 Tag config
-Typography
-	Smartypants
-	Syntax highlighting
-	https://david.darn.es/2017/07/25/adding-heading-links-to-your-jekyll-blog/#how-to-add-a-heading-link-like-the-one-next-to-this-heading
-	Custom CSS classes, see 404, about
-	Images
-SEO config
+	Hyperlink tags under post
+x Typography
+x 	Smartypants
+x 	Syntax highlighting
+x	Deep links
+x 	Images
+x Copyright footer
+x SEO config
 Sitemap/robots config
 Fancy landing page?
 	Footer

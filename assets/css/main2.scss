@@ -1,0 +1,41 @@
+---
+---
+
+.post-preview .post-meta,
+.post-heading .post-meta,
+.post-footer .post-meta {
+  color: #808080;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+.by-line {
+  margin-bottom: 30px;
+}
+
+
+// Now that the post title is also a link,
+// I have to prevent the link from being default blue.
+.intro-header h1 a {
+  color: rgb(64, 64, 64);
+}
+
+// https://ben.balter.com/2014/03/13/pages-anchor-links/#the-css
+.header-link {
+  position: absolute;
+  left: -0.5em;
+  opacity: 0;
+
+  \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+  \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+  \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
+}

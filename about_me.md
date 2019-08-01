@@ -10,9 +10,10 @@ the part that I find the most intriguing is conversation between well-informed
 but differing perspectives. I hope to be able to supply one of those
 perspectives; that is why I keep up a blog.
 
-<figure>
-  <img src="{{ site.baseurl }}/assets/img/about/Apollo_15_launch.jpg" alt="Apollo 15 launch" style="height: 2in; display: block; margin: auto;"/>
-  <figcaption class="image-credit">
-    <a href="https://commons.wikimedia.org/wiki/File:Apollo_15_launch.jpg">Wikipedia</a>
-  </figcaption>
-</figure>
+<a href="https://commons.wikimedia.org/wiki/File:Apollo_15_launch.jpg">
+  <img
+    src="{{ site.baseurl }}/assets/img/about/Apollo_15_launch.jpg"
+	alt="Apollo 15 launch"
+	style="height: 2in; display: block; margin: auto;"
+  />
+</a>

@@ -87,7 +87,9 @@ url-pretty: "SamGrayson.me"
 ##################
 
 timezone: "America/Chicago"
-# markdown: kramdown
+markdown: kramdown
+kramdown:
+  auto_ids: true # Auto-generate ID's for headings
 # highlighter: rouge
 theme: beautiful-jekyll-theme
 permalink: /:year-:month-:day-:title/
@@ -117,7 +119,7 @@ exclude:
 twitter:
   username: charmoniumQ
   card: summary
-logo: assets/img/logo/drawinghands.jpg
+logo: /assets/img/logo/drawinghands.jpg
 social:
   name: Samuel Grayson
   links:

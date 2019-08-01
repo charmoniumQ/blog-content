@@ -154,20 +154,13 @@
           </li>
           {% endif %}
         </ul>
+
         <p class="copyright text-muted">
-	  {% if site.author.name %}
-            {{ site.author.name }}
-	    &nbsp;&bull;&nbsp;
-          {% endif %}
-
-          {{ site.time | date: '%Y' }}
-
-	  {% if site.url-pretty %}
-	  &nbsp;&bull;&nbsp;
-	  <a href="{{ site.url }}">{{ site.url-pretty }}</a>
-	  {% endif %}
-	    </p>
-	        <!-- Please don't remove this, keep my open source work credited :) -->
+             <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. External images may be subject to additional restrictions. Click an image for its attribution. Share with love <i class="fa fa-heart" aria-hidden="true"></i>
+         </p>
+                {% comment %}
+	        Please don't remove this, keep my open source work credited :)
+                {% endcomment %}
 		<p class="theme-by text-muted">
 		  Theme by
 		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
@@ -176,3 +169,21 @@
     </div>
   </div>
 </footer>
+
+{% comment %}
+https://ben.balter.com/2014/03/13/pages-anchor-links/#the-javascript
+{% endcomment %}
+<script>
+$(function() {
+  return $("h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.attr('id');
+    icon = '<i class="fa fa-link"></i>';
+    if (id) {
+      return $el.prepend($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+    }
+  });
+});
+</script>
+

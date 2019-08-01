@@ -1,5 +1,6 @@
 #!/bin/sh
 
+bundle install --path vendor/bundle
 bundle exec jekyll serve --watch --drafts --future --livereload --incremental
 
 # host=samgrayson.me

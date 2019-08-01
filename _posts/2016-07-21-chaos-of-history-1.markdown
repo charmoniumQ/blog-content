@@ -2,6 +2,10 @@
 layout: post
 title: The Chaos of History (part 1)
 tags: history
+image: /assets/img/chaos-of-history-1/Assassination_of_Archduke_Franz_Ferdinand.jpg
+bigimg: /assets/img/chaos-of-history-1/Assassination_of_Archduke_Franz_Ferdinand.jpg
+image_url: https://commons.wikimedia.org/wiki/File:Assassination_of_Archduke_Franz_Ferdinand_1914.jpg
+bigimg_url: https://commons.wikimedia.org/wiki/File:Assassination_of_Archduke_Franz_Ferdinand_1914.jpg
 excerpt: >
   We like to think that systems like human society have some predictable order,
   when in reality, history is driven by completely unpredictable random events.

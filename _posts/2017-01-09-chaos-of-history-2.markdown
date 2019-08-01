@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  "The Chaos of History (part 2)"
+title:  The Chaos of History (part 2)
 tags: [math, history]
-postscript: View the <a href="https://github.com/charmoniumQ/blog-content/blob/master/resources/chaos-of-history.ipynb">source code</a>
+image: /assets/img/chaos-of-history-2/jackson_pollock.jpg
+bigimg: /assets/img/chaos-of-history-2/jackson_pollock.jpg
+image_url: https://www.flickr.com/photos/piljun/6301137213
+bigimg_url: https://www.flickr.com/photos/piljun/6301137213
+postscript: View the <a href="https://github.com/charmoniumQ/blog-content/blob/master/planning/post_resources/chaos-of-history.ipynb">source code</a>
 excerpt: >
 
   In a previous post, I talked about how a few random events can greatly change
@@ -29,7 +33,7 @@ distribution. Towards the far right, the probability is very small. It should be
 rare that I would toss a rock straight up in the air and see it land 20 meters
 away. The far left and far right are called the 'tails' of the distribution.
 
-<img alt="Gaussian distribution" src="{{ site.baseurl }}/assets/img/2017-01-09-chaos-of-history-2/gaussian_distribution.png" style="margins: auto;"/>
+<img alt="Gaussian distribution" src="{{ site.baseurl }}/assets/img/chaos-of-history-2/gaussian_distribution.png" style="margins: auto;"/>
 
 ## Haphazard stroll
 
@@ -40,7 +44,7 @@ looks like when the rock falls based on a Gaussian distribution. For good
 measure, I will run 5 random walks starting from different spots in different
 colors.
 
-<img alt="Gaussian random walk" src="{{ site.baseurl }}/assets/img/2017-01-09-chaos-of-history-2/gaussian_random_walk.png" style="margins: auto;"/>
+<img alt="Gaussian random walk" src="{{ site.baseurl }}/assets/img/chaos-of-history-2/gaussian_random_walk.png" style="margins: auto;"/>
 
 But I want to talk about another distribution: the Cauchy distribution. It is
 very similar to the Gaussian distribution, but it is ever-so-slightly higher at
@@ -51,13 +55,13 @@ often too quick to assume that a bell-curve shaped distributions are Gaussian,
 as
 [some would argue](http://rocketscienceofwallstreet.blogspot.com/2012/04/nassim-nicholas-taleb-against-gaussian.html).
 
-<img alt="Gaussian and Cauchy distribution" src="{{ site.baseurl }}/assets/img/2017-01-09-chaos-of-history-2/gaussian_and_cauchy.png" style="margins: auto;"/>
+<img alt="Gaussian and Cauchy distribution" src="{{ site.baseurl }}/assets/img/chaos-of-history-2/gaussian_and_cauchy.png" style="margins: auto;"/>
 
 But the difference seems small. Let's see how these distributions differ in a
 real experiment. I'll take a random walk using the Cauchy distribution and look
 at the differences
 
-<img alt="Cauchy random walk" src="{{ site.baseurl }}/assets/img/2017-01-09-chaos-of-history-2/cauchy_random_walk.png" style="margins: auto;"/>
+<img alt="Cauchy random walk" src="{{ site.baseurl }}/assets/img/chaos-of-history-2/cauchy_random_walk.png" style="margins: auto;"/>
 
 In the Gaussian random walk, no single rock-throw really moved us far from the
 origin. None of the throw were really 'out there'. In each Cauchy random walk,

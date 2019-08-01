@@ -2,6 +2,10 @@
 layout: post
 title:  "Zealots of Tech"
 tags: programming
+image: /assets/img/zealots_of_tech/tools.jpg
+bigimg: /assets/img/zealots_of_tech/tools.jpg
+image_url: https://www.goodfreephotos.com/other-photos/carpenter-tools-vector-clipart.jpg.php
+bigimg_url: https://www.goodfreephotos.com/other-photos/carpenter-tools-vector-clipart.jpg.php
 excerpt: >
 
   There are few technologies and methodologies that are globally applicable in software development,
@@ -30,8 +34,6 @@ on the 'best programming language' with many comments like "depends on
 what you want to optimize" and "it's far more important to learn to be
 a good programmer."
 
-## Industry Standard
-
 Managers and investors have a different set of biases about
 programming languages: they insist on using what everyone else is
 using. They know that Java on tomcat is a popular choice for web
@@ -44,6 +46,8 @@ innovative solution from being developed because "it's [not industry
 standard](http://paulgraham.com/icad.html)." _Aside: That utterance is
 the sound of a good idea dying an unnecessary death in a company that
 reeks of mediocrity._
+
+## Critical Thinking
 
 There is some value in using languages you have deep prior knowledge
 of, but there is also value in keeping your mind sharp by learning new
