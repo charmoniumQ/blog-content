@@ -1,7 +1,24 @@
 #!/bin/sh
 
-bundle install --path vendor/bundle
-bundle exec jekyll serve --watch --drafts --future --livereload --incremental
+if [ ! -d vendor/bundle ]
+then
+    bundle install --path vendor/bundle
+fi
+
+#bundle exec jekyll serve --watch --drafts --future --livereload --incremental --strict_front_matter
+
+bundle exec jekyll build
+
+cd _site
+if [ ! -d .git/ ]
+then
+    git init
+    git remote add origin git@github.com:charmoniumQ/charmoniumQ.github.io.git
+    touch .nojekyll
+fi
+message=https://github.com/charmoniumQ/blog-content/commit/$(git rev-parse HEAD)
+git commit -am "${message}"
+git push origin master
 
 # host=samgrayson.me
 # droppath=/home/sam/tmp/

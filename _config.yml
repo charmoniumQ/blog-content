@@ -93,6 +93,7 @@ kramdown:
 # highlighter: rouge
 theme: beautiful-jekyll-theme
 permalink: /:year-:month-:day-:title/
+keep_files: [.nojekyll, .git/]
 # plugins:
 # Plugins in the jekyll_plugins group in Gemfile need not be added here
 

@@ -4,16 +4,16 @@ x 	"Ocurred to me on..."
 x 	Navbar shows "About Me"
 x Favicon https://realfavicongenerator.net/
 x Feed config
-Tag config
-	Hyperlink tags under post
+x Tag config
+x 	Hyperlink tags under post
 x Typography
 x 	Smartypants
 x 	Syntax highlighting
-x	Deep links
+x 	Deep links
 x 	Images
 x Copyright footer
 x SEO config
-Sitemap/robots config
+x Sitemap/robots config
 Fancy landing page?
 	Footer
 LSI config
