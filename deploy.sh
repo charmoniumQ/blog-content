@@ -15,7 +15,7 @@ else
     cd _site
     if [ ! -d .git/ ]
     then
-	git init
+	git init .
 	git remote add origin git@github.com:charmoniumQ/charmoniumQ.github.io.git
 	git pull origin master
     fi
