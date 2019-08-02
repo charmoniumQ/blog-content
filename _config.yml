@@ -6,7 +6,7 @@
 
 baseurl: "" # the subpath of your site, e.g. /blog
 email: sam@samgrayson.me
-title: Interesting thoughts
+title: Interesting Thoughts
 description: >- # this means to ignore newlines
   Blog about computers, mathematics, and philosophy. Occasionally,
   other people find my thoughts on these topics interesting.

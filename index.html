@@ -1,6 +1,9 @@
 ---
 layout: page
-use-site-title: true
+title: Interesting Thoughts
+subtitle: >-
+  Blog about computers, mathematics, and philosophy. Occasionally,
+  other people find my thoughts on these topics interesting.
 ---
 
 <div class="posts-list">
@@ -21,6 +24,8 @@ use-site-title: true
     </p>
 
     <div class="post-entry-container">
+      {% comment %}
+      TODO: Make this better. The image takes up too much space right now.
       {% if post.image %}
       <div class="post-image">
         <a href="{{ post.image_url }}">
@@ -28,6 +33,7 @@ use-site-title: true
         </a>
       </div>
       {% endif %}
+      {% endcomment %}
       <div class="post-entry">
         {{ post.excerpt }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
