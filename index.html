@@ -26,14 +26,14 @@ subtitle: >-
     <div class="post-entry-container">
       {% comment %}
       TODO: Make this better. The image takes up too much space right now.
+      {% endcomment %}
       {% if post.image %}
-      <div class="post-image">
+      <div class="post-image text-center">
         <a href="{{ post.image_url }}">
-          <img src="{{ post.image | relative_url }}" height="400px">
+          <img src="{{ post.image | relative_url }}" height="300px" class="excerpt-img">
         </a>
       </div>
       {% endif %}
-      {% endcomment %}
       <div class="post-entry">
         {{ post.excerpt }}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}

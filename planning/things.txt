@@ -49,3 +49,5 @@ https://jekyllthemes.io/
 https://demo.ghost.io/
 https://jekyll-themes.com/free/
 http://lanyon.getpoole.com/
+
+Jack, Brendan, Matthew, Neil
