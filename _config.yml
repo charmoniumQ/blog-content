@@ -77,7 +77,7 @@ url-pretty: "SamGrayson.me"
 #gtag: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: "UA-145087833-1"
 
 # Google Tag Manager ID
 #gtm: ""
