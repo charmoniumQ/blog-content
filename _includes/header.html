@@ -1,4 +1,6 @@
+{% comment %}
 <!-- TODO this file has become a mess, refactor it -->
+{% endcomment %}
 
 <div itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -23,7 +25,7 @@
 <header class="header-section {% if page.bigimg %}has-img{% endif %}">
 {% if page.bigimg %}
 <a href="{{page.bigimg_url}}">
-  <div class="big-img intro-header">
+  <div class="big-img intro-header {% if page.bigimg_fill %}big-img-fill{% endif %}">
     <canvas height="400px" ></canvas>
   </div>
 </a>
