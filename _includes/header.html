@@ -9,15 +9,15 @@
 {% if page.bigimg %}
   <div id="header-big-imgs" data-num-img={% if page.bigimg.first %}{{ page.bigimg.size }}{% else %}1{% endif %}
     {% for bigimg in page.bigimg %}
-      {% assign imgnum = forloop.index %}
-      {% for imginfo in bigimg %}
-        {% if imginfo[0] %}
-          data-img-src-{{ imgnum }}="{{ imginfo[0] | prepend: site.baseurl | replace: '//', '/' }}"
-          data-img-desc-{{ imgnum }}="{{ imginfo[1] }}"
-        {% else %}
-          data-img-src-{{ imgnum }}="{{ imginfo | prepend: site.baseurl | replace: '//', '/' }}"
-        {% endif %}
-      {% endfor %}
+	  {% assign imgnum = forloop.index %}
+	  {% for imginfo in bigimg %}
+	    {% if imginfo[0] %}
+		  data-img-src-{{ imgnum }}="{{ imginfo[0] | replace: '//', '/' }}"
+		  data-img-desc-{{ imgnum }}="{{ imginfo[1] }}"
+		{% else %}
+		  data-img-src-{{ imgnum }}="{{ imginfo | replace: '//', '/' }}"
+		{% endif %}
+	  {% endfor %}
     {% endfor %}
   ></div>
 {% endif %}
@@ -25,7 +25,7 @@
 <header class="header-section {% if page.bigimg %}has-img{% endif %}">
 {% if page.bigimg %}
 <a href="{{page.bigimg_url}}">
-  <div class="big-img intro-header {% if page.bigimg_fill %}big-img-fill{% endif %}">
+  <div class="big-img intro-header">
     <canvas height="400px" ></canvas>
   </div>
 </a>

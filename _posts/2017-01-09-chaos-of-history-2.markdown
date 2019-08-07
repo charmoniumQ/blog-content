@@ -20,7 +20,7 @@ In a
 I talked about how a few random events can greatly change history. In this
 post, I will describe that idea more mathematically.
 
-## A Gedanken
+## A Thought Experiment
 
 Let's say I throw a rock straight up into the air and measure how far away it
 falls 10000 times. _I have too much free time._ I can plot that distance against
@@ -35,7 +35,7 @@ away. The far left and far right are called the 'tails' of the distribution.
 
 <img alt="Gaussian distribution" src="{{ site.baseurl }}/assets/img/chaos-of-history-2/gaussian_distribution.png" style="margins: auto;"/>
 
-## Haphazard stroll
+## Haphazard Stroll
 
 Now let's say I throw the rock in the air, but this time I walk to where it
 landed and throw the rock in the air again from that point. This is called a
@@ -70,7 +70,7 @@ really impactful throws that did most of the moving (especially in the blue and
 green random walk). Outliers are still rare, but when they do occur, they are
 **hugely influential**.
 
-## The historical analogy
+## The Historical Analogy
 
 I suggest that many historical phenomena act have analogous behavior. One example
 might be, the assassination of Arch Duke Franz Ferdinand; another might be the
@@ -81,7 +81,7 @@ explosive events. There was a general trend of anti-imperialism in the early
 twentieth century. Even though most movements of that trend were minor, it only
 took one explosive assassination to change world history irrevocably.
 
-## Looking to the future
+## Looking to the Future
 
 The *average value* of a Gaussian or Cauchy distribution is zero (move neither
 to the left or to the right). *On average*, when we throw the rock straight up,

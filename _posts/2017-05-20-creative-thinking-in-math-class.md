@@ -15,7 +15,7 @@ Most students will say math class is stupid and boring. As a math person myself,
 ![Rick Sanchez on scohol](/assets/img/creative-thinking-in-math-class/rick_on_school.jpg)
 
 
-## Transferable skill: problem-solving
+## Transferable Skill: Problem-Solving
 
 Asking novel kinds of questions teaches students how to solve problems they haven't explicitly learned how to solve. In any job position, you will be asked to do this. Some students are afraid to trust their own original thoughts. Explicit practice with feedback can help them eventually use their own intelligence when making choices. I don't think *only* asking novel questions to students is necessarily a good idea, but I think we to ask more than none.
 
@@ -59,7 +59,7 @@ Paradoxically, the teacher helped the student by asking more questions. Students
 
 This style of thinking is valuable without a mentor as well. Students should learn that even though they can't answer the big question, they can still make up other small questions (using some of their own ingenuity) which they can answer. Perhaps math units should start with guiding questions, and then slowly allow the student to make up their own questions. Currently, there is absolutely no incentive for students to think of their own questions about the concepts they are learning.
 
-## Transferable skill: communication: explaining and persuading
+## Transferable Skill: Communication: Explaining and Persuading
 
 The method of teaching used above is called the "Socratic method." Socrates famously [explained mathematics to an uneducated servant](https://en.wikipedia.org/wiki/Meno#Dialogue_with_Meno.27s_slave). Explaining complicated things in simple terms is an art. There is not necessarily a 'right' way of explaining something, but some ways are better than others.
 
@@ -87,7 +87,7 @@ Perhaps randomly assigned groups of students could present each concept to the r
 
 Perhaps classes should also incorporate proof-writing into their class. Most math competitions (like [USAMO](https://artofproblemsolving.com/wiki/index.php/United_States_of_America_Mathematical_Olympiad) and [Putnam](https://www.maa.org/math-competitions/putnam-competition)) do this and have efficient infrastructure for grading. Students should be graded on mathematical correctness and "elegance." I understand that it would take more teacher-effort to grade these essay-like responses, but I hope you see why I think that's a good trade. While elegance can be subjective, it is not more so than grading essays in English class. I think the skill of explaining is inherently subjectively evaluated in any form, but by no means should that complaint excuse us from practicing a vital skill.
 
-## Making things better
+## Making Things Better
 
 I don't know exactly how to incorporate these ideas. Surely there is some value and wisdom in the traditional system; everyone needs to learn fractions. I am merely pointing out that maybe we need some traditional rote-learning mixed with novel problem-solving and communication, which are currently absent completely. In English class, where there is time allocated to appreciate the great masters and to express your own ideas creatively. I think math can be studied more like English If not for the sheer beauty of mathematics or blissful joy of creativity, then for the pragmatism of transferable skills students could gain in the process.
 
@@ -95,8 +95,8 @@ Twelve years of seemingly ceaseless mental drudgery extinguish any remaining rem
 
 I won't pretend I am the first person on earth to notice this. These ideas are already implemented in some institutions. I was lucky enough to have dedicated teachers who went above and beyond what was required to implement these ideas. They also believed in me, and I am grateful for that. I hope to follow their example with my own spin on things too.
 
-## Math is art
-
+## Math is Art
+n
 From the Mayans to the Greeks, from Babylon to the Indus River, every civilization has developed the disciplines of music, painting, and _math_. It satisfies some basic human desire to explore the unknown, express ideas, and awe at sheer beauty. Sometimes it happens to be useful, but its purpose is [to be beautiful](https://en.wikipedia.org/wiki/A_Mathematician%27s_Apology).
 
 That's what math actually is to those who practice it. You get to make crazy up hypotheticals (e.g. "what if we had numbers whose squares are negative?") and investigate them to their logical conclusion (e.g. complex analysis). There are many more of these: "are all infinities equal?" gives cardinal and ordinal numbers, "could a computer program prove everything?" gives computability theory and the incompleteness theorem.

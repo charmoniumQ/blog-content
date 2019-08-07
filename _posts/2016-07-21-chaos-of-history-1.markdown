@@ -88,7 +88,7 @@ like the housing crisis or 9/11, are completely random and unforeseen,
 even by scholars. That course of history wasn't determined by simple
 rules ore logical reasons. It's just Lady Fortuna spinning her wheel.
 
-## Further reading
+## Further Reading
 
 - [Part 2]({{ site.baseurl }}{% post_url 2017-01-09-chaos-of-history-2 %})
 - Scientific American: [Gavrilo Princip, conspiracy theories and the fragility of cause and effect](http://blogs.scientificamerican.com/the-curious-wavefunction/gavrilo-princip-conspiracy-theories-and-the-fragility-of-cause-and-effect/)
