@@ -200,7 +200,11 @@ do {
 
 It is a weird transformation, but you can see its utility: we can---to some extent---forget that `getLine` returns wrapped values; `x` is just a regular `int`. This makes writing monadic code as natural as operating on regular values.
 
+### State
+
 Note that `getInput` is a pure function: it takes a function of type `Int -> Void` and calls it with an argument and returns `void`. Although the returned value is always the same (`void`), the argument it passes could be different in subsequent calls. This is how we can model what would otherwise be a non-deterministic function in a pure-functional way. Pure functional programming languages represent [the whole outside world](https://en.wikibooks.org/wiki/Haskell/Understanding_monads/IO#The_universe_as_part_of_our_program) as a monadic context. Programs just bind computation onto this context.
+
+### Control-flow
 
 Monads are often called [programmable semicolons](http://www.thisurlisfalse.com/programmable-semicolon-monads-in-haskell/), because the monad's `bind` controls the subsequent computation.
 

@@ -9,7 +9,8 @@ fi
 
 if [ "$1" = "-i" ]
 then
-    bundle exec jekyll serve --watch --drafts --future --livereload --incremental --strict_front_matter
+    xdg-open "http://localhost:4000"
+    JEKYLL_ENV="production" bundle exec jekyll serve --watch --drafts --future --livereload --incremental --strict_front_matter
 else
 
     cd _site
