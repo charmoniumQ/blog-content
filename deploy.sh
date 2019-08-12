@@ -9,8 +9,16 @@ fi
 
 if [ "$1" = "-i" ]
 then
-    xdg-open "http://localhost:4000"
-    JEKYLL_ENV="production" bundle exec jekyll serve --watch --drafts --future --livereload --incremental --strict_front_matter
+    port=4000
+    xdg-open "http://localhost:${port}"
+    bundle exec jekyll serve \
+	   --watch \
+	   --drafts \
+	   --future \
+	   --livereload \
+	   --incremental \
+	   --strict_front_matter \
+	   -P "${port}"
 else
 
     cd _site
@@ -22,7 +30,7 @@ else
     fi
     cd ..
 
-    bundle exec jekyll build
+    JEKYLL_ENV="production" bundle exec jekyll build
 
     commit=$(git rev-parse HEAD)
 
