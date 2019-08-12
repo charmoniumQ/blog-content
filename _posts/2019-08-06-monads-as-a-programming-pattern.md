@@ -101,13 +101,13 @@ main() {
 
 Streams naturally arise as well; They are just promises that get `resolve`d multiple times.
 
-## Precise Definition
+## Precise definition
 
 Borrowing heavily from [Wikipedia](https://en.wikipedia.org/wiki/Monad_(functional_programming)#Definition), a monad is three things&hellip;
 
 - A generic type `M` .
-- A function, often called `wrap` or `return` (Haskell), with signature is `T -> M<T>`. In my examples this is, `Nullable.Some` , `Collection.makeCollection`, and `Promise.makePromise`. This convertor takes a regular value and wraps it in a monadic one.
-- A combinator, often called `bind` or spelled as an infix operator, `>>=` (Haskell), with signature `(M<T>, T -> M<V>) -> M<V>`. In my examples this is, `Nullable.apply` , `Collection.flatMap`, and `Promise.then`. This combinator unwraps the monad, does an operation, and returns the monad of the result.
+- A function, often called `wrap`, `of` ([JS fantasy-land](https://github.com/fantasyland/fantasy-land)), or `return` ([Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/base-4.12.0.0/Control-Monad.html#v:return)), with signature is `T -> M<T>`. In my examples this is, `Nullable.Some` , `Collection.makeCollection`, and `Promise.makePromise`. This convertor takes a regular value and wraps it in a monadic one.
+- A combinator, often called `bind`, `chain` ([JS fantasy-land](https://github.com/fantasyland/fantasy-land)) or spelled as an infix operator, `>>=` ([Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/base-4.12.0.0/Control-Monad.html#v:-62--62--61-)), with signature `(M<T>, T -> M<V>) -> M<V>`. In my examples this is, `Nullable.apply` , `Collection.flatMap`, and `Promise.then`. This combinator unwraps the monad, does an operation, and returns the monad of the result.
 
 &hellip; that respects these three laws&hellip;
 
@@ -134,13 +134,23 @@ This last law is why people like Promises; they turn horizontally [nested callba
 <img src="/assets/img/monads-as-a-programming-pattern/pyramid_of_doom.jpg" alt="pyramid of doom" />
 </a>
 
+These laws let me write functions that will work with _any_ monad. For example, I mentioned implementing `map` on some specific monads. Now I'll implement it for all monads that follow the monad-laws.
+
+```java
+// I'll assume that all monads in this language implement the interface Monad<T>
+
+Monad<V> map(Monad<T> input, Function<T, V> func) {
+    return input.bind((T elem) => Monad.wrap(func(elem)));
+}
+```
+
 ### Category Theory
 
 {% katexmm %}
 The concept of monads comes from [category theory](https://en.wikipedia.org/wiki/Monad_(category_theory)). Their use in computer programming was first explicated rather recently, in 1989 ([CiteSeerX 10.1.1.26.2787](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.2787)). The monad has friends which are also borrowed into programming: monoids, functors, and applicatives. Although the math is important and valuable I think the monad pattern can be used effectively without knowledge of category theory, just as a programmer can effectively use the `lambda`-functions without understanding [$\lambda$-calculus](https://en.wikipedia.org/wiki/Lambda_calculus). The concept from category theory is just inspiration. The laws I stated above are enough for program-correctness.
 {% endkatexmm %}
 
-If a construct does not satisfy the monad laws, it technically isn't a monad, but it might still be monad-inspired. Most JavaScript promise libraries do not quite satisfy the definition of Monad for technical reasons better explained [on StackOverflow](https://stackoverflow.com/a/45772042/1078199) [in multiple answers](https://stackoverflow.com/a/50173415/1078199), although [some]([https://github.com/briancavalier/creed](https://github.com/briancavalier/creed)) do. Even Haskell's so-called `IO Monad` [may not even be a proper category-theory monad](https://www.quora.com/How-would-you-explain-a-concept-of-monads-to-a-non-CS-person).
+If a construct does not satisfy the monad laws, it technically isn't a monad, but it might still be monad-inspired. In most JS libraries, `.then` can take `A -> Monad<B>` AND `A -> B` (not monad-compliant). This design choice breaks associativity for objects with a property named `then` ([1](https://stackoverflow.com/a/45772042/1078199), [2](https://stackoverflow.com/a/50173415/1078199)). This is not necessarily wrong or bad. I personally find it a pragmatic decision that often simplifies code, even though it is less theoretically nice. [Some JS libraries]([https://github.com/briancavalier/creed](https://github.com/briancavalier/creed)) do fit the mathematical monad bill. Even Haskell's so-called `IO Monad` [may not even be a proper category-theory monad](https://www.quora.com/How-would-you-explain-a-concept-of-monads-to-a-non-CS-person).
 
 ## Syntax
 
@@ -181,14 +191,30 @@ And this is the semantically equivalent using do-notation:
 
 ```haskell
 do {
-    x <- getInput    -- Everything after here goes after: getInput >>= \x -> ...
-    y <- getInput    -- Everything after here goes after: getInput >>= \y -> ...
+    x <- getInput;   -- Everything after here goes after: getInput >>= \x -> ...
+    y <- getInput;   -- Everything after here goes after: getInput >>= \y -> ...
     return x + y
-    -- since this are semantically equivalent, x and y are just regular ints
+    -- x and y are just regular ints, not wrapped ints.
 }
 ```
 
 It is a weird transformation, but you can see its utility: we can---to some extent---forget that `getLine` returns wrapped values; `x` is just a regular `int`. This makes writing monadic code as natural as operating on regular values.
+
+Note that `getInput` is a pure function: it takes a function of type `Int -> Void` and calls it with an argument and returns `void`. Although the returned value is always the same (`void`), the argument it passes could be different in subsequent calls. This is how we can model what would otherwise be a non-deterministic function in a pure-functional way. Pure functional programming languages represent [the whole outside world](https://en.wikibooks.org/wiki/Haskell/Understanding_monads/IO#The_universe_as_part_of_our_program) as a monadic context. Programs just bind computation onto this context.
+
+Monads are often called [programmable semicolons](http://www.thisurlisfalse.com/programmable-semicolon-monads-in-haskell/), because the monad's `bind` controls the subsequent computation.
+
+```haskell
+list = [1, 2, 3]
+squares = do {
+    x <- list;
+    -- the List monad controls the code at this point
+	-- in fact, it runs once for each element in the list.
+    return [x**2]
+}
+```
+
+This allows for complex control-flow operations (such as coroutines) to be implemented at the user-level in a monad instead of the language-level. Languages without do-notation have to bend over backwards to emulate it in specific cases, as we will see.
 
 ### C#/Python/JavaScript await keyword
 
@@ -273,7 +299,7 @@ Here are some ways of thinking about monads. There are other ways to think about
 
 Now you know the pattern. It is useful to recognize in the wild, and it is a good tool in the box.
 
-### My poor pedagogy
+### Maybe this explanation is bad
 
 It seems everyone who learns about monads goes through [this cycle](https://stackoverflow.com/a/19551168/1078199):
 

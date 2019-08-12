@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Creative thinking in math class"
+title:  "Creative Thinking in Math Class"
 tags: [math, pedagogy]
 image: /assets/img/creative-thinking-in-math-class/rick_on_school.jpg
 image_url: https://www.teepublic.pl/etui-na-telefon/2061587-school-is-not-a-place-for-smart-people
@@ -96,7 +96,7 @@ Twelve years of seemingly ceaseless mental drudgery extinguish any remaining rem
 I won't pretend I am the first person on earth to notice this. These ideas are already implemented in some institutions. I was lucky enough to have dedicated teachers who went above and beyond what was required to implement these ideas. They also believed in me, and I am grateful for that. I hope to follow their example with my own spin on things too.
 
 ## Math is Art
-n
+
 From the Mayans to the Greeks, from Babylon to the Indus River, every civilization has developed the disciplines of music, painting, and _math_. It satisfies some basic human desire to explore the unknown, express ideas, and awe at sheer beauty. Sometimes it happens to be useful, but its purpose is [to be beautiful](https://en.wikipedia.org/wiki/A_Mathematician%27s_Apology).
 
 That's what math actually is to those who practice it. You get to make crazy up hypotheticals (e.g. "what if we had numbers whose squares are negative?") and investigate them to their logical conclusion (e.g. complex analysis). There are many more of these: "are all infinities equal?" gives cardinal and ordinal numbers, "could a computer program prove everything?" gives computability theory and the incompleteness theorem.
