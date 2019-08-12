@@ -131,7 +131,7 @@ monadicObj.bind((T x) -> f(x))
 This last law is why people like Promises; they turn horizontally [nested callbacks into vertically chained callbacks](https://medium.com/@justintulk/flattening-nested-promises-in-javascript-88f04793ded7), saving us from the [Pyramid of Doom](https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)):
 
 <a href="https://qr.ae/TWvqL3">
-<img src="/assets/img/monads-as-a-programming-pattern/pyramid_of_doom.jpg" alt="pyramid of doom" />
+<img src="/assets/img/monads-as-a-programming-pattern/pyramid_of_doom.png" alt="pyramid of doom" />
 </a>
 
 These laws let me write functions that will work with _any_ monad. For example, I mentioned implementing `map` on some specific monads. Now I'll implement it for all monads that follow the monad-laws.

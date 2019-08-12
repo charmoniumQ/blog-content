@@ -2,7 +2,7 @@
 layout: post
 title:  "Creative Thinking in Math Class"
 tags: [math, pedagogy]
-image: /assets/img/creative-thinking-in-math-class/rick_on_school.jpg
+image: /assets/img/creative-thinking-in-math-class/rick_on_school.png
 image_url: https://www.teepublic.pl/etui-na-telefon/2061587-school-is-not-a-place-for-smart-people
 js:
   - /assets/js/spoilers.js
@@ -12,7 +12,7 @@ excerpt: >
 
 Most students will say math class is stupid and boring. As a math person myself, I have to say: they're right! Math taught in school is twelve years of Pavlovian training to associate math with arbitrariness and fear. Not only does this rob the student of a potentially enjoyable experience, it robs the student of the transferable skills that are exercised in math. I will give two examples.
 
-![Rick Sanchez on scohol](/assets/img/creative-thinking-in-math-class/rick_on_school.jpg)
+![Rick Sanchez on scohol](/assets/img/creative-thinking-in-math-class/rick_on_school.png)
 
 
 ## Transferable Skill: Problem-Solving

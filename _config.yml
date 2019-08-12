@@ -28,6 +28,9 @@ encoding: utf-8 # Make sure the encoding is right
 
 jekyll-minifier:
   compress_javascript: false
+# optimize images:
+# $ convert ${file} -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB -scale 50% ${file}.2
+# https://developers.google.com/speed/docs/insights/OptimizeImages
 
 ##########################
 # beautiful-jekyll-theme #
