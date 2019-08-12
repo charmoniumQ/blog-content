@@ -12,15 +12,15 @@ excerpt: >
 
 ## Overview
 
-There is a mathematical [category-theory definition](https://ncatlab.org/nlab/show/monad), but you can use them effectively without understanding that (so don't @ me, Brendan). This article is written from a programmer's perspective, where a monad is a [_software engineering pattern_](https://en.wikipedia.org/wiki/Software_design_pattern). Like other patterns, you may have already used it without knowing it was the monad pattern. There is still  value in studying such patterns, because then you can use it more fluidly.
+This article is written from a programmer's perspective, where a monad is a [_software engineering pattern_](https://en.wikipedia.org/wiki/Software_design_pattern). Like other patterns, you may have already used it without knowing it was the monad pattern. There is still  value in studying such patterns, because then you can use it more fluidly. There is a mathematical [category-theory definition](https://ncatlab.org/nlab/show/monad), but you can use them effectively without understanding that (so don't @ me, Brendan).
 
-**Imprecise definition:** A monad is a type that wraps an object of another type. There is no direct way to get that 'inside' object. Instead you ask the monad to act on it for you. It is a lot like the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern), but it is capable of returning something wrapped in another monad. This essential property makes functions on monads composable. I'll get to a precise definition after you understand the imprecise one through some examples.
+**Imprecise definition:** A monad is a type that wraps an object of another type. There is no direct way to get that 'inside' object. Instead you ask the monad to act on it for you. Monadic classes are a lot like classes implementing the [visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern), but monads are capable of returning something wrapped in another monad. This essential property makes functions on monads composable. I'll get to a precise definition after you understand the imprecise one through some examples.
 
 ## Examples
 
 ### Maybe/Nullable/Optional monad
 
-Our fist example is Maybe. I will write its interface in a Java-like language.
+Our first example is Maybe. I will write its interface in pseudocode resembling Java.
 
 ```java
 class Maybe<T> {
@@ -30,7 +30,7 @@ class Maybe<T> {
 }
 ```
 
-As promised, the Maybe monad can contain another object, and we can ask it to act indirectly. Notice that apply doesn't take a function from `T -> V`, but rather from `T -> Maybe<V>`. It unboxes the inside object, does the function and returns the new box. This allows monads to be chained together.
+As promised, the Maybe monad can contain another object, and we can ask it to act indirectly. Notice that apply doesn't take a function from `T -> V`, but rather from `T -> Maybe<V>`. It unboxes the inside object, executes the function and returns the new box. This allows monads to be chained together.
 
 ```java
 // Let's assume getInput asks the user for input,
@@ -48,31 +48,31 @@ Maybe<int> wrappedRatio = wrappedA.apply((int a) -> {
 });
 ```
 
-If `apply` took `T -> V`, this would evaluate to a `Maybe<Maybe<int>>`, which is less wieldy. Also note that a function`T -> V` can still be used; just compose it with `Some`:
+If `apply` took `T -> V`, this would evaluate to a `Maybe<Maybe<int>>`, which quickly becomes unwieldy. Also note that a function `T -> V` can still be used; just compose it with `Some`:
 
 ```java
 // let func: T -> V
 result = wrapped.apply((T a) -> Some(func(a)));
-// result is Monad<V>, as desired
+// result is Maybe<V>, as desired
 ```
 
 ### List/Collection monad
 
-In the previous example, you might think a monad is an interface for [aggregating (in the OOP sense)](https://en.wikipedia.org/wiki/Object_composition#Aggregation) another object, but here is a monad that is more general than that.
+In the previous example, you might think a monad is just an interface for [aggregating (in the OOP sense)](https://en.wikipedia.org/wiki/Object_composition#Aggregation) another object, but here is a monad that is more general than that.
 
 ```java
 class Collection<T> {
     // makes collection containing one element
     static Collection<T> makeCollection(T initialElement);
 
-    // runs func on every element and combines the results
+    // runs func on every element and concatenates the results
     Collection<V> flatMap(Function<T, Collection<V>> func);
 
 
     // runs func on every element
-    Collection<V> map(Fucntion<T, V> func) {
+    Collection<V> map(Function<T, V> func) {
         // implemented by calling flatMap
-        flatMap((T element)  -> makeCollection(func(element)));
+        flatMap((T element) -> makeCollection(func(element)));
     }
 }
 ```
@@ -81,7 +81,7 @@ Instead of calling the operator `apply`, I called it `flatMap` as [the name is w
 
 ### Promise/Awaitable monad
 
-In the previous two examples, you may have wanted a method that exposes the wrapped value(s), maybe `getValues`. The whole point of the monad pattern is that you don't give in to that urge. It's like [data-hiding (in the OOP sense)](https://en.wikipedia.org/wiki/Information_hiding). Instead of accessing elements directly, you chain on your computations through `apply`/`flatMap`/`then`. The Promise monad is an example where you physically can't ask for the wrapped values, because it might not exist yet! [A common beginner question](https://stackoverflow.com/q/45378267/1078199) is how to get the value _out_ of the promise for subsequent computation, but the answer is instead to put the subsequent computation _into_ the promise, using `.then`.
+In the previous two examples, you may have wanted a method that exposes the wrapped value(s), maybe `getValues`. The whole point of the monad pattern is to avoid that urge, and . It's like [data-hiding (in the OOP sense)](https://en.wikipedia.org/wiki/Information_hiding). Instead of accessing elements directly, you chain on your computations through `apply`/`flatMap`/`then`. The Promise monad is an example where you physically can't ask for the wrapped values, because it might not exist yet! [A common question](https://stackoverflow.com/q/45378267/1078199) is how to get the value _out_ of the promise for subsequent computation, but the answer is instead to put the subsequent computation _into_ the promise, using `.then`.
 
 ```java
 class Promise<T> {
@@ -107,7 +107,7 @@ Borrowing heavily from [Wikipedia](https://en.wikipedia.org/wiki/Monad_(function
 
 - A generic type `M` .
 - A function, often called `wrap` or `return` (Haskell), with signature is `T -> M<T>`. In my examples this is, `Nullable.Some` , `Collection.makeCollection`, and `Promise.makePromise`. This convertor takes a regular value and wraps it in a monadic one.
-- A combinator, often called `bind` or spelled as an infix operator, `>>=` (Haskell), with signature `(M<T>, T -> V) -> M<V>`. In my examples this is, `Nullable.apply` , `Collection.flatMap`, and `Promise.then`. This combinator unwraps the monad, does an operation, and returns the monad of the result.
+- A combinator, often called `bind` or spelled as an infix operator, `>>=` (Haskell), with signature `(M<T>, T -> M<V>) -> M<V>`. In my examples this is, `Nullable.apply` , `Collection.flatMap`, and `Promise.then`. This combinator unwraps the monad, does an operation, and returns the monad of the result.
 
 &hellip; that respects these three laws&hellip;
 
@@ -268,8 +268,8 @@ As you can see, these language features are just special cases of the more gener
 Here are some ways of thinking about monads. There are other ways to think about monads; I just picked three that make sense to me and seem exhaustive.
 
 1. Sometimes the monad acts like a container of another type, as in the Collection monad. This is why some people emphatically exclaim eureka's like "a monad is just like [a burrito](https://blog.plover.com/prog/burritos.html)", "[a spacesuit](http://telofy.soup.io/post/23797479/Think-of-a-monad-as-a-spacesuit)", or "[a burrito in a spacesuit](https://www.reddit.com/r/haskell/comments/1bymg1/monads_are_burritos_in_spacesuits_full_of_nuclear/)." These people miss that it can be anything else; in many use-cases the monad can't simply 'contain' it. While the authors might understand this, a novice reader likely won't.
-2. In these non-containing use-cases, the monad could be acting like a potential for there being a value, kind of like a Promise. Often monads in this case have the same semantics as "[continuations](https://en.wikipedia.org/wiki/Continuation-passing_style)" or callbacks: I don't have the value, but I can have the guy who does call (haha) you.
-3. Sometimes it acts like the context for data. This last case is used in functional programming languages to isolate impure side-effects of functions. `getLine` in Haskell returns a `string` in an [`IO`](https://en.wikibooks.org/wiki/Haskell/Understanding_monads/IO) monad. Perhaps you would have a Thread monad, that represents thread-local data (the thread is context for the data). You can't operate on the data because it is not in your thread, but you can ask the other thread to operate on it for you. I chose not to elaborate examples of this use-case because it is less applicable outside of ML-family languages.
+2. In these non-containing use-cases, the monad can act like a potential for there being a value, kind of like a Promise. Often monads in this case have the same semantics as "[continuations](https://en.wikipedia.org/wiki/Continuation-passing_style)" or callbacks: I don't have the value, but I can have the guy who does call (haha) you.
+3. Sometimes a monad can act like the context for data. This last case is used in functional programming languages to isolate impure side-effects of functions. `getLine` in Haskell returns a `string` in an [`IO`](https://en.wikibooks.org/wiki/Haskell/Understanding_monads/IO) monad. Perhaps you would have a Thread monad, that represents thread-local data (the thread is context for the data). You can't operate on the data because it is not in your thread, but you can ask the other thread to operate on it for you. I chose not to elaborate examples of this use-case because it is less applicable outside of ML-family languages.
 
 Now you know the pattern. It is useful to recognize in the wild, and it is a good tool in the box.
 
@@ -291,8 +291,10 @@ It took me three tries over the past five years to understand monads. Of all the
 3. None pointed out the connection with `await`.
 
 The first point was a pragmatic choice to emphasize the utility of a monad, and the latter two are ways of connecting it to things the reader probably already understands.
-I acknowledge that this article probably won't help most people because I might not be good at explaining how I learned this thing, and there is a large possibility I don't have the same learning style as you. I do hope the act of reading it inspires an original thought in at least a few readers or even one; That will make it worthwhile.
+I acknowledge that this article probably won't help most people because I might not be good at explaining how I learned this thing, and there is a large possibility that I don't have the same learning style as you. However, I do hope the act of reading it inspires an original thought in at least a few readers or even one; That will make all this worthwhile.
+
 ## Further reading
 - [You Could Have Invented Monads! (And Maybe You Already Have.)](http://blog.sigfpe.com/2006/08/you-could-have-invented-monads-and.html) This is the best tutorial I have read through for its brevity and the challenges it gives the reader.
 - [Monad tutorials timeline](https://wiki.haskell.org/Monad_tutorials_timeline) This is a somewhat opinionated list of many blogposts like this one. Given the variety of pedagogical choices, there is likely one that is suited to your learning style.
 - [Wikibooks Haskell/Category Theory](https://en.wikibooks.org/wiki/Haskell/Category_theory) This is more technical, delving into the actual category theory. [A different chapter](https://en.wikibooks.org/wiki/Haskell/Applicative_functors#A_sliding_scale_of_power) draws a progression from functors to applicatives to monads. The series is great if you want a deeper dive.
+- [Category Theory for Programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/) I've only the first half, but this seems like the most complete way to learn this while keeping ones sanity (as opposed to reading a math book on category theory).
