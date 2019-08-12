@@ -7,9 +7,10 @@ then
     bundle install --path vendor/bundle
 fi
 
+port=4000
+
 if [ "$1" = "-i" ]
 then
-    port=4000
     xdg-open "http://localhost:${port}"
     bundle exec jekyll serve \
 	   --watch \
@@ -19,8 +20,17 @@ then
 	   --incremental \
 	   --strict_front_matter \
 	   -P "${port}"
-else
+fi
 
+if [ "$1" = "-p" ]
+then
+    JEKYLL_ENV="production" bundle exec jekyll build
+    xdg-open "http://localhost:${port}"
+    python3 -m http.server --directory "_site" "${port}"
+fi
+
+if [ -z "$1" ]
+then
     cd _site
     if [ ! -d .git/ ]
     then
@@ -32,6 +42,8 @@ else
 
     JEKYLL_ENV="production" bundle exec jekyll build
 
+    git commit
+    git push
     commit=$(git rev-parse HEAD)
 
     cd _site
@@ -43,26 +55,3 @@ else
     git push origin master
     cd ..
 fi
-
-
-# host=samgrayson.me
-# droppath=/home/sam/tmp/
-# serverpath=/srv/samgrayson.me
-
-# cd `dirname $0`/blog-content
-
-# bundle exec jekyll build
-
-# rsync --checksum \
-# 	  --recursive \
-# 	  --verbose \
-# 	  --compress \
-# 	  --delete \
-# 	  --progress \
-# 	  --info=progress2 \
-# 	  _site \
-# 	  $host:$droppath
-
-# ssh $host "sudo cp -R $droppath/_site/* $serverpath"
-
-# #rm -rf _site

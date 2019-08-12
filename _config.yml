@@ -27,8 +27,7 @@ author:
 encoding: utf-8 # Make sure the encoding is right
 
 jekyll-minifier:
-  uglifier_args:
-    harmony: true
+  compress_javascript: false
 
 ##########################
 # beautiful-jekyll-theme #
