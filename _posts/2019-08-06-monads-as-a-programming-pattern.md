@@ -240,7 +240,7 @@ is equivalent to:
 async function foo() {
     x = await getInput();
     y = await getInput();
-    return makePromise(x + y);
+    return x + y;
 }
 ```
 
