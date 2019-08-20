@@ -106,8 +106,8 @@ Streams naturally arise as well; They are just promises that get `resolve`d mult
 Borrowing heavily from [Wikipedia](https://en.wikipedia.org/wiki/Monad_(functional_programming)#Definition), a monad is three things&hellip;
 
 - A generic type `M` .
-- A function, often called `wrap`, `of` ([JS fantasy-land](https://github.com/fantasyland/fantasy-land)), or `return` ([Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/base-4.12.0.0/Control-Monad.html#v:return)), with signature is `T -> M<T>`. In my examples this is, `Nullable.Some` , `Collection.makeCollection`, and `Promise.makePromise`. This convertor takes a regular value and wraps it in a monadic one.
-- A combinator, often called `bind`, `chain` ([JS fantasy-land](https://github.com/fantasyland/fantasy-land)) or spelled as an infix operator, `>>=` ([Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/base-4.12.0.0/Control-Monad.html#v:-62--62--61-)), with signature `(M<T>, T -> M<V>) -> M<V>`. In my examples this is, `Nullable.apply` , `Collection.flatMap`, and `Promise.then`. This combinator unwraps the monad, does an operation, and returns the monad of the result.
+- A function, often called `wrap`, `of` ([JS fantasy-land](https://github.com/fantasyland/fantasy-land)), or `return` ([Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/base-4.12.0.0/Control-Monad.html#v:return)), with signature is `T -> M<T>`. In my examples this is, `Maybe.Some` , `Collection.makeCollection`, and `Promise.makePromise`. This convertor takes a regular value and wraps it in a monadic one.
+- A combinator, often called `bind`, `chain` ([JS fantasy-land](https://github.com/fantasyland/fantasy-land)) or spelled as an infix operator, `>>=` ([Haskell](https://downloads.haskell.org/~ghc/latest/docs/html/libraries/base-4.12.0.0/Control-Monad.html#v:-62--62--61-)), with signature `(M<T>, T -> M<V>) -> M<V>`. In my examples this is, `Maybe.apply` , `Collection.flatMap`, and `Promise.then`. This combinator unwraps the monad, does an operation, and returns the monad of the result.
 
 &hellip; that respects these three laws&hellip;
 
