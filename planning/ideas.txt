@@ -1,3 +1,9 @@
+Jonathan counting
+	21st century = years whose digits start with 20
+	numbers between a and b should be b - a: so counting has to be inclusive-exclusive. so between 0 and 1 should be 1 number.
+	ranges over the alphabet
+	ordinals vs cardinalsb
+	
 Cards which form sets
 Stealing elasticity back from economics
 Why economic issues should be separated from a elected officials

@@ -93,7 +93,7 @@ I don't know exactly how to incorporate these ideas. Surely there is some value 
 
 Twelve years of seemingly ceaseless mental drudgery extinguish any remaining remnant of mathematical creativity, curiosity, or inspiration from students (see the wonderful [A Mathematicians Lament by Paul Lockhart](https://www.maa.org/sites/default/files/pdf/devlin/LockhartsLament.pdf) for more in this vein). It's no wonder most students hate math; I couldn't do a better job of making people hat it if I tried! It's also no wonder that sometimes people at their job act like mindless, instruction-following drones that do only exactly what they are told with no ability to improvise or innovate in a self-motivated way.
 
-I won't pretend I am the first person on earth to notice this. These ideas are already implemented in some institutions. I was lucky enough to have dedicated teachers who went above and beyond what was required to implement these ideas. They also believed in me, and I am grateful for that. I hope to follow their example with my own spin on things too.
+I won't pretend I am the first person on earth to notice this (see [Math Teachers Should Be More Like Football Coaches](https://www.nytimes.com/2019/05/11/opinion/sunday/math-teaching-football.html?module=inline)). These ideas are already implemented in some institutions. I was lucky enough to have dedicated teachers who went above and beyond what was required to implement these ideas. They also believed in me, and I am grateful for that. I hope to follow their example with my own spin on things too.
 
 ## Math is Art
 
