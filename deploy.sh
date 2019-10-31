@@ -42,8 +42,17 @@ then
 
     JEKYLL_ENV="production" bundle exec jekyll build
 
-    git commit
-    git push
+    if [ -n "$(git status --porcelain)" ]
+    then
+	git commit
+    fi
+
+    if [ -n "$(git rev-list origin/master...master)" ]
+    then
+	git push
+    fi
+
+
     commit=$(git rev-parse HEAD)
 
     cd _site
