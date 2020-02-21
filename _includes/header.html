@@ -51,8 +51,26 @@
           {% endif %}
 
           {% if include.type == "post" %}
-          <span class="post-meta">Occurred to me on <time itemprop="dateModified" itemprop="datePublished" datetime="{{page.date}} | date: ''">{{ page.date | date: "%B %-d, %Y" }}</time></span>
+			<span class="post-meta">
+			  Occurred to me on <time itemprop="dateModified" itemprop="datePublished" datetime="{{page.date}} | date: ''">{{ page.date | date: "%B %-d, %Y" }}</time>
+			</span>
           {% endif %}
+
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+        Tags:
+        {% if site.link-tags %}
+        {% for tag in page.tags %}
+        <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+        {% endfor %}
+        {% else %}
+          {{ page.tags | join: ", " }}
+        {% endif %}
+      </div>
+      {% endif %}
+
+			  <br /><a href="#copyright"><img alt="See footer for license" style="border-width:0" src="/assets/img/footer/CC-BY.png" /></a>
+
         </div>
       </div>
     </div>
@@ -87,7 +105,10 @@
           {% endif %}
           
           {% if include.type == "post" %}
-          <span class="post-meta">Occurred to me on <time itemprop="datePublished" datetime="{{page.date | date: '%F'}}">{{ page.date | date: "%B %-d, %Y" }}</time></span>
+			<span class="post-meta">
+			  Occurred to me on <time itemprop="datePublished" datetime="{{page.date | date: '%F'}}">{{ page.date | date: "%B %-d, %Y" }}</time>
+			  <br /><a href="#copyright"><img alt="See footer for license" style="border-width:0" src="/assets/img/footer/CC-BY.png" /></a>
+			</span>
           {% endif %}
 
 

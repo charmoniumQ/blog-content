@@ -14,8 +14,8 @@ url: https://samgrayson.me # the base hostname & protocol for your site, e.g. ht
 author:
   name: Samuel Grayson
   twitter: charmoniumQ
-  # email: sam@samgrayson.me
-  facebook: charmoniumQ
+  # email: someone@example.com
+  # facebook: Someone
   github: charmoniumQ
   twitter: charmoniumQ
   reddit: charmoniumQ
@@ -145,7 +145,7 @@ lang: en_US
 # Pagination #
 ##############
 
-paginate: 5
+paginate: 10
 
 #####################
 # Post front matter #

@@ -1,10 +1,15 @@
 {% if layout.common-js %}
   {% for js in layout.common-js %}
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    {% comment %}
+      doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+      https://stackoverflow.com/a/18832826/1078199
+    {% endcomment %}
     {% if js contains 'jquery' %}
       <script>
       	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="{{ js | replace: "//", "/" }}"></scr' + 'ipt>');
+          var script = document.createElement('script');
+          script.src = "{{ js | replace: "//", "/" }}";
+          document.write(script.outerHTML);
       	}
       </script>
     {% else %}

@@ -7,7 +7,7 @@ bigimg: /assets/img/monads-as-a-programming-pattern/toolbox.png
 image_url: https://www.maxpixel.net/static/photo/1x/Toolbox-Handyman-Construction-Tools-Builder-3411589.png
 bigimg_url: https://www.maxpixel.net/static/photo/1x/Toolbox-Handyman-Construction-Tools-Builder-3411589.png
 excerpt: >
-  This article is written from a programmer's perspective, where a monad is a _software engineering pattern_. It's just another tool for your box.
+  This article is written from a programmer's perspective, where a monad is a <i>software engineering pattern</i>. It's just another tool for your box.
 ---
 
 ## Overview
