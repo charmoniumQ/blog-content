@@ -31,6 +31,7 @@ fi
 
 if [ -z "$1" ]
 then
+	mkdir -p _site
     cd _site
     if [ ! -d .git/ ]
     then
