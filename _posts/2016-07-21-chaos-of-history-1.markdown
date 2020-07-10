@@ -11,7 +11,7 @@ excerpt: >
   when in reality, history is driven by completely unpredictable random events.
 ---
 
-## The Man Who Caused History
+## One Who Causes History
 
 Think of the history of the twentieth century and who is most responsible for
 it. You might be thinking of world leaders like Franklin Delano Roosevelt,
@@ -23,29 +23,27 @@ But I suggest a man you probably haven't heard of named Gravilo Princip.
 
 The day started off poorly for Archduke Franz Ferdinand when three security
 officials were left behind, by mistake. Then an assassin threw a bomb at his
-car! But the bomb bounced off his car and the assassination failed. The
-Archduke's motorcade sped away to protect him from any other assassination
-attempts.
+car, and the rest is history!
 
-> "The Ides of March have come, and I am still alive!" -- Julius Caesar by
-> William Shakespeare
+Actually, it isn't. The bomb bounced off his car and the exploded without
+injuring the Archduke. The motorcade sped away to protect him from any other
+assassination attempts. This moment is what Ceasar must have felt when he
+exclaimed "The Ides of March have come, and I am still alive!".
 
-Princip's realized he lost his chance, so he gave up and went to a
-nearby food shop. But when the motorcade started up again, someone
-forgot to tell the driver to change the route. When this was realized,
-the command was given to reverse, but the transmission was jammed so
-the car stopped _right in front of an awe-stricken Pincip_.
+Princip realized he lost his chance, so he gave up and went to a nearby food
+shop. But when the motorcade started up again, someone forgot to tell the driver
+to change the route. By the time the Archuke's staff realized, the transmission
+jammed in their automobile (still a recent invention), so the it stopped _right
+in front of an awe-stricken Pincip_.
 
-By a ridiculous stroke of misfortune (or luck, depending on your point
-of view), between the security officials being left behind, the first
-failed assassination attempt, the driver not knowing the route, the
-transmission being jammed, Gravilo Princip shot and killed Archduke
-Ferdinand
+By a ridiculous stroke of misfortune (or luck, depending on your point of view),
+between the security officials being left behind, the first failed assassination
+attempt, the driver not knowing the route, the transmission jamming, Gravilo
+Princip had his opportunity. On June 28, Princip shot and killed Archduke
+Ferdinand, setting in motion a chain of events which would result in the First
+World War.
 
 ## Princip's Butterfly Effect
-
-As you might know, this assassination brings up long-standing tensions in
-Europe, setting off World War One.
 
 As you might know, the treaty which ended World War One involved massive war
 reparations to be paid by the Germans. The German people came to resent of these
