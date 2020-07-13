@@ -62,10 +62,10 @@ at headline "The Cook and the Chef").
 Human tendency is to jump on the hype bandwagon and follow the
 crowd. It is the underlying habit of humans to fall into
 [groupthink](https://en.wikipedia.org/wiki/Groupthink) caused by
-laziness. It isn't an overt laziness like shirking duty or skipping
-work, it is a subconscious laziness that avoids critical evaluation of
-one's own opinions. It isn't too dissimilar from the echo-chamber of
-our political environment, or a [naked
+laziness. It isn't an overt laziness like skipping work, it is a
+subconscious laziness that avoids critical evaluation of one's own
+opinions. It isn't too dissimilar from the echo-chamber of our
+political environment, or a [naked
 emperor](https://en.wikipedia.org/wiki/The_Emperor%27s_New_Clothes)
 who claims that only the intelligent are able to see his new clothes.
 
