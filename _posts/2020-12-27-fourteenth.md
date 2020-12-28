@@ -131,7 +131,7 @@ In [_Blostock v. Clayton County (2020)_](https://en.wikipedia.org/wiki/Bostock_v
 
 # The Fourteenth Amendment Today
 
-The most important I want to convey, is how this Amendment has an active role in policy today.
+The Amendment has implications for a host of policy issues today.
 
 **Marriage rights:** Extended to interracial couples and same-sex couples in [_Loving v. Virginia (1967)_](https://en.wikipedia.org/wiki/Loving_v._Virginia) and [_Obergefell v. Hodges (2015)_](https://en.wikipedia.org/wiki/Obergefell_v._Hodges) respectively on the basis of the Equal Protection Clause.
 
@@ -147,7 +147,7 @@ The most important I want to convey, is how this Amendment has an active role in
 
 **Money bail:** There is an as-yet undecided case called [_O'Donnel v. Harris County_](https://www.theusconstitution.org/litigation/odonnell-v-harris-county-texas-et-al/) which alleges that the bail system used in most of Houston, TX unfairly discriminates on the basis of wealth when more reasonable alternatives are available.
 
-# Why I wrote this article
+# Takeaways
 
 In school, I had to memorize the preamble and was quizzed on the Bill of Rights. The preamble has little bearing on understanding how the government functions today, and the Fourteenth Amendment has had an arguably greater impact on my life than the Bill of Rights by itself. Investigation of it leads to several important lessons about liberty and our constitution:
 
@@ -155,4 +155,4 @@ In school, I had to memorize the preamble and was quizzed on the Bill of Rights.
 
 - The fight for racial equality isn't just the Civil War or _Brown v. Board_. The fight for gender equality isn't just The Nineteenth Amendment or The Civil Rights Act. These would adapt and persist across _multiple centuries_ in a patchwork-quilt of legislative, judicial, executive, social, and cultural battles. The struggle is by no means linear and by no means won. We are still fighting the descendants of the same fight today.
 
-- I also realized, while researching this article, that the American Constitution actually affects the daily lives of Americans. We owe a lot of things, abortion rights, contraceptive rights, gun rights, gay marriages, interracial marriages, and desegregation. More than this, the constitution is a _living document_. Most obviously, it has been changed the constitutional amendments like the Fourteenth, but, more subtly, the courts change it through case law. _Plessy_ and later _Brown_ fundamentally changed how we interpret the Equal Protection Clause. I was surprised to learn how many landmark cases were only decided recently (_McDonald (2010)_, _Obergefell (2015)_, _Blostock (2020)_). I think the strength of the constitution is that it can be adapted by the courts to suit the novel challenges of modern society, and it is worth telling people about.
+- The American Constitution is a _living document_. Most obviously, it has been changed the constitutional amendments like the Fourteenth, but, more subtly, the courts change it through case law. _Plessy_ and later _Brown_ fundamentally changed how we interpret the Equal Protection Clause. I was surprised to learn how many landmark cases were only decided recently (_McDonald (2010)_, _Obergefell (2015)_, _Blostock (2020)_). I think the strength of the constitution is that it can be adapted to suit the novel challenges of modern society.
