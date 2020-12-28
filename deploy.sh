@@ -43,10 +43,11 @@ then
 
     JEKYLL_ENV="production" bundle exec jekyll build
 
-    if [ -n "$(git status --porcelain)" ]
-    then
-	git commit
-    fi
+    # if [ -n "$(git status --porcelain)" ]
+    # then
+	# git commit
+    # fi
+
 
     if [ -n "$(git rev-list origin/master...master)" ]
     then
