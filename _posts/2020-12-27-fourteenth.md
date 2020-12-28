@@ -82,7 +82,7 @@ Even the Brady Campaign Against Gun Violence claimed victory following _McDonald
 
 > nor deny to any person within its jurisdiction the equal protection of the laws;
 
-The abolitionists expected that state governments would not start treating the newly-freed slaves equally overnight. Hence, the wrote the Equal Protection Clause. Given this, how could segregation have existed for so long in the South?
+The abolitionists expected that state governments would not start treating the newly-freed slaves equally overnight. Hence, they wrote the Equal Protection Clause. Given this, how could segregation have existed for so long in the South?
 
 The Supreme Court again minimized the impact of the Fourteenth Amendment, to the point where the most egregious segregation was legal, in four major decisions:
 
