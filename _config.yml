@@ -44,7 +44,7 @@ navbar-links:
   About Me: about_me/
 
 # Fill in your Disqus shortname (NOT the userid)
-# disqus: interesting-thoughts
+disqus: interesting-thoughts
 
 avatar: /assets/img/logo/drawinghands.jpg
 
