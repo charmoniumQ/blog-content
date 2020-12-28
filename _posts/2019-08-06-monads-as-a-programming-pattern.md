@@ -77,7 +77,7 @@ class Collection<T> {
 }
 ```
 
-Instead of calling the operator `apply`, I called it `flatMap` as [the name is well-known](https://stackoverflow.com/questions/26684562/whats-the-difference-between-map-and-flatmap-methods-in-java-8). Again, `flatMap` is more general because it can implement `map`, but not the other way around (you'd need `map` **and** something like Python's [`chain.from_iterables`](https://docs.python.org/3.7/library/itertools.html#itertools.chain.from_iterable)).
+Instead of calling the operator `apply`, I called it `flatMap` as [the name is well-known](https://stackoverflow.com/questions/26684562/whats-the-difference-between-map-and-flatmap-methods-in-java-8). Again, `flatMap` is more general because it can implement `map`, but not the other way around (you'd need `map` **and** something like Python's [`itertools.chain.from_iterables`](https://docs.python.org/3.7/library/itertools.html#itertools.chain.from_iterable)).
 
 ### Promise/Awaitable monad
 
@@ -150,7 +150,7 @@ Monad<V> map(Monad<T> input, Function<T, V> func) {
 The concept of monads comes from [category theory](https://en.wikipedia.org/wiki/Monad_(category_theory)). Their use in computer programming was first explicated rather recently, in 1989 ([CiteSeerX 10.1.1.26.2787](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.26.2787)). The monad has friends which are also borrowed into programming: monoids, functors, and applicatives. Although the math is important and valuable I think the monad pattern can be used effectively without knowledge of category theory, just as a programmer can effectively use the `lambda`-functions without understanding [$\lambda$-calculus](https://en.wikipedia.org/wiki/Lambda_calculus). The concept from category theory is just inspiration. The laws I stated above are enough for program-correctness.
 {% endkatexmm %}
 
-If a construct does not satisfy the monad laws, it technically isn't a monad, but it might still be monad-inspired. In most JS libraries, `.then` can take `A -> Monad<B>` AND `A -> B` (not monad-compliant). This design choice breaks associativity for objects with a property named `then` ([1](https://stackoverflow.com/a/45772042/1078199), [2](https://stackoverflow.com/a/50173415/1078199)). This is not necessarily wrong or bad. I personally find it a pragmatic decision that often simplifies code, even though it is less theoretically nice. [Some JS libraries]([https://github.com/briancavalier/creed](https://github.com/briancavalier/creed)) do fit the mathematical monad bill. Even Haskell's so-called `IO Monad` [may not even be a proper category-theory monad](https://www.quora.com/How-would-you-explain-a-concept-of-monads-to-a-non-CS-person).
+If a construct does not satisfy the monad laws, it technically isn't a monad, but it might still be monad-inspired. In most JS libraries, `.then` can take `A -> Monad<B>` AND `A -> B` (not monad-compliant). This design choice breaks associativity for objects with a property named `then` ([1](https://stackoverflow.com/a/45772042/1078199), [2](https://stackoverflow.com/a/50173415/1078199)). This is not necessarily wrong or bad. I personally find it a pragmatic decision that often simplifies code, even though it is less theoretically nice. [Some JS libraries](https://github.com/briancavalier/creed) do fit the mathematical monad bill. Even Haskell's so-called `IO Monad` [may not even be a proper category-theory monad](https://www.quora.com/How-would-you-explain-a-concept-of-monads-to-a-non-CS-person).
 
 ## Syntax
 
@@ -213,7 +213,7 @@ list = [1, 2, 3]
 squares = do {
     x <- list;
     -- the List monad controls the code at this point
-	-- in fact, it runs once for each element in the list.
+    -- in fact, it runs once for each element in the list.
     return [x**2]
 }
 ```
