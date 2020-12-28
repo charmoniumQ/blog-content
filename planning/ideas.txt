@@ -1,3 +1,42 @@
+ILLIXR Switchboard
+
+ILLIXR Spindle
+	Compare to gobject
+
+ILLIXR cpu_timer3
+	cons of gprof:
+		- measures everything, could have overhead
+		- no information on dynamic arguments
+		- captures caller of thread-launch
+	caveats:
+		- no recursion
+		- **not for optimization**; for component comparison in a system
+			- Not answering "how to make faster system with same components at a low-level?"; answering "which components take the most CPU time?"; answering "what's the end-to-end latency in my system?"
+	Improvements:
+		- Switchboard communicates its serial number
+		- Also have integer-comments
+		- Bloat-free (standardized?) binary file format
+	Compare overhead per funccall
+	perf, poormansprofiler, operf, gprof
+	http://poormansprofiler.org/
+	https://stackoverflow.com/questions/1777556/alternatives-to-gprof/1779343#1779343
+	https://oprofile.sourceforge.io/examples/
+	https://stackoverflow.com/questions/375913/how-can-i-profile-c-code-running-on-linux/378024#378024
+
+charmonium cache
+	incpy
+	Monotonic variables (within normal ones)
+	GC intermediates
+	Russian dolls or barrel-o-monkeys?
+		Future?
+	ProgenyTracking class
+		Automatic propagation?
+		Future?
+			Expand futures in argument?
+			Non-recursion
+
+Charity
+
 Jonathan counting
 	21st century = years whose digits start with 20
 	numbers between a and b should be b - a: so counting has to be inclusive-exclusive. so between 0 and 1 should be 1 number.
@@ -5,5 +44,14 @@ Jonathan counting
 	ordinals vs cardinalsb
 	
 Cards which form sets
-Stealing elasticity back from economics
+
+Stealing elasticity from economics for math
+
 Why economic issues should be separated from a elected officials
+
+du
+
+    du -sb .
+    find . -type f -exec wc -c '{}' \; | cut -f1 -d' ' | paste -sd+ | bc
+    find . -type f -exec sh -c "stat '{}' | grep -oP '(?<=Size: )\d*'" \; | paste -sd+ | bc
+    find . -type f -exec stat '{}' \; | grep -oP '(?<=Size: )\d*' | paste -sd+ | bc
