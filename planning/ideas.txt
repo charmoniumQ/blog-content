@@ -23,6 +23,47 @@ ILLIXR cpu_timer3
 	https://oprofile.sourceforge.io/examples/
 	https://stackoverflow.com/questions/375913/how-can-i-profile-c-code-running-on-linux/378024#378024
 
+My First Experience with Guix
+	Functional Package Management
+		Hardware-level virtualization
+			Xen, KVM, Qemu
+			Paravirtualization involves modifying the guest a little.
+		OS-level virtualization
+			That has too much overhead; build in isolation techniques into the OS
+			Docker, but also FreeBSD jail
+			https://leftasexercise.com/2018/04/12/docker-internals-process-isolation-with-namespaces-and-cgroups/
+		Maybe that's still too much? Docker images are fat, take forever to build, and aren't actually deterministic.
+		Environment-level virtualization
+			Same FS, but PATH and LD_LIBRARY_PATH are automatically set by $PACKAGE_MANAGER for different uses.
+			Multiple profiles, different versions of the software coexist, but still reuse where possible
+			Deterministic (name has hash of inputs)
+			Cache builds
+			Distribute software systems https://www.mpscholten.de/docker/2016/01/27/you-are-most-likely-misusing-docker.html
+			Declarative
+			Roll-back
+			Cons:
+				Learning curve
+				Disk and CPU utilization
+				https://hands-on.cloud/why-you-should-never-ever-use-nixos/
+	Guix vs Nix?
+		Scheme > Nix lang
+		Nix has more pkgs
+		Both have fantastic communities
+		Guix needs root to install. Nix has some workaround hack with . Changing `--with-store` workaround causes everything to get recompiled.
+		Guix can import Nix packages, but not the other way around. I think this is due to Guix's lazy-evaluation.
+		More tools (`guix pack` exports a guix environment to a Docker image, `guix lint` checks for CVEs, `guix graph` shows you a graph of packages)
+		More complete documentation (no Nix pills)
+		No shell
+		Guix has no devops (although it's coming https://guix.gnu.org/blog/2019/towards-guix-for-devops/)
+	Guix problems
+		Packages not already existing
+		Even if already exist, may need to write a new one for configuration
+		Not too bad; Writing recipes is easy, isn't it?
+	Guile problems
+		Lisp makes it easy to hack the language. The macro system permits one to manipulate the AST. Cite BeautifulRacket. That is simultaneously its power and its downfall. Everyone and their mother has a syntax manipulation macro.
+			Interpreting syntax has dynamic-scope vs local-scope. I couldn't find a way to pass a variable defined in enclosing scope to a package.
+		Imports bind names into the global namespace (from blah import *). Binding to a namespace is possible, but not the default. When I want to see how some symbol works, and I can't statically locate its definition.
+
 charmonium cache
 	incpy
 	Monotonic variables (within normal ones)
@@ -35,7 +76,7 @@ charmonium cache
 			Expand futures in argument?
 			Non-recursion
 
-Charity
+Effective Altruism
 
 Jonathan counting
 	21st century = years whose digits start with 20
