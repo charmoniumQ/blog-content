@@ -13,9 +13,9 @@ Most people are horrible at giving advice, and I have silently endured it, noddi
 
 Most advice-givers egregiously overgeneralize. If something was a certain way for them in the past, it is that way for everyone in perpetuity. Often, they na&iuml;vely fail to acknowledge the possibility of variation between different experiences of the same thing, and the possibility that conditions have changed since they formed their observations. For example, "Good students go to class.". I know many counterexamples of this claim, and I'm sure you do too. It may be good advice in the general case, but as stated, it is an overgeneralization.
 
-The root of this overgeneralization seems more common than it should be for a simple mistake; Perhaps, it is a symptom of the [Dunning-Kruger effect][3]. People believe since they have experienced a situation once, they are an expert on all experiences of that situation. Most situations people give advice for (marriage, school, career) are influenced by chaotic processes, so we have little reason to expect one experience will be anything like another, even if they have similar starting points.
+The cause of this tendency to confidently overgeneralize could be a symptom of the [Dunning-Kruger effect][3]. People believe since they have experienced a situation once, they are an expert on all experiences of that situation. Most situations people give advice for (marriage, school, career) are influenced by chaotic processes, so we have little reason to expect one experience will be anything like another, even if they have similar starting points.
 
-Many say to [never use so-called weasel words][1] such as "_may_" (the irony of encountering incorrectly overgeneralized advice while searching for how to write advice is not lost on me). However, the utility of advice-giver's goal is not to win an argument; It is to convey observations. There is an important difference between certainties and a probable statements. Using words like "may" to conveying this difference is called [linguistic hedging][2], and it can be useful for the advice-reciever to know the advice-giver's degree of certainty.
+Many say to [never use so-called weasel words][1] such as "_may_" (the irony of encountering incorrectly overgeneralized advice while searching for how to write advice is not lost on me). However, the utility of advice-giver's goal is not to win an argument; It is to convey observations. There is an important difference between certainties and a probablies. Using words like "may" to convey this difference is called [linguistic hedging][2], and it can be useful for the advice-reciever to know the advice-giver's degree of confidence.
 
 The advice-reciever knows more about their own goals than the advice-giver. Perhaps, the advice-receiver's goals are so different that the advice-giver's strategy is detrimental. There seems to be a unquestioned cultural pressure (Nietzsche's [slave morality][5]) for students to get the highest grades they can.
 
@@ -27,14 +27,16 @@ Then, is giving good advice impossible?
 [4]: https://en.wikipedia.org/wiki/Affirming_the_consequent
 [5]: https://en.wikipedia.org/wiki/Master%E2%80%93slave_morality
 
+Note: My opinion on this has changed since I wrote this draft. I think the human mind is accustomed to "exceptions-based" reasoning; universal quantified statements are so rare in human experience (outside of mathematics), that most people don't mean their universal quantifiers literally. It is understood that "all birds can fly" really means "most birds can fly." It is different than Dunning-Kruger, which refers to a specific kind of over-confidence with skills-based domains (e.g. driving, burgling, public speaking), not general life advice. If I were to continue this essay, I would go more into the theme "giving good advice requires listening" instead.
+
 - Actionable advice
 - Not obvious; impactful
-"Try to start college off on the right foot."
+- Bad example: "Try to start college off on the right foot."
 
 - State facts instead of rules
 
 - Positive nothings
-"Never give up"
+- Example: "Never give up"
 
 Better advice:
 - Weasel words
@@ -43,7 +45,7 @@ Better advice:
 - Can I omit this?
 - Positive **somethings**
 
-I realize the irony of giving advice on giving advice, but I'm doing this anyway. I sincerely believe I am exemplifying what I am recommending, which has improved this essay beyond a sack of potatos.
+I realize the irony of giving advice on giving advice, but I'm doing this anyway. I sincerely believe I am exemplifying what I am recommending, which has improved this essay.
 
 Many people overgeneralize their own experience, believe they are experts, fail to acknowledge uncertainty and chaos, and assume the advice-reciever share their same goals and skills.
 

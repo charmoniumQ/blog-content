@@ -46,14 +46,15 @@ My First Experience with Guix
 				Disk and CPU utilization
 				https://hands-on.cloud/why-you-should-never-ever-use-nixos/
 	Guix vs Nix?
+		https://news.ycombinator.com/item?id=16490027
 		Scheme > Nix lang
 		Nix has more pkgs
+		Static types
+		Parameterized packages
 		Both have fantastic communities
-		Guix needs root to install. Nix has some workaround hack with . Changing `--with-store` workaround causes everything to get recompiled.
 		Guix can import Nix packages, but not the other way around. I think this is due to Guix's lazy-evaluation.
-		More tools (`guix pack` exports a guix environment to a Docker image, `guix lint` checks for CVEs, `guix graph` shows you a graph of packages)
+		More tools (`guix lint` checks for CVEs, `guix graph` shows you a graph of packages)
 		More complete documentation (no Nix pills)
-		No shell
 		Guix has no devops (although it's coming https://guix.gnu.org/blog/2019/towards-guix-for-devops/)
 	Guix problems
 		Packages not already existing
